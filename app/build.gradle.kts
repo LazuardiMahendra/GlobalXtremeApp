@@ -61,5 +61,8 @@ dependencies {
     implementation ("com.squareup.retrofit2:adapter-rxjava3:2.9.0")
     implementation ("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.6.1")
 
+    implementation ("com.auth0.android:jwtdecode:2.0.1")
+
+
 
 }

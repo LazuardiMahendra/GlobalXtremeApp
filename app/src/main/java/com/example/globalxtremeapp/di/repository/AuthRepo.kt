@@ -10,7 +10,7 @@ import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import io.reactivex.rxjava3.subjects.PublishSubject
 
-class AuthRepo(private val apiService : ApiService) :AuthDataSource{
+class AuthRepo(private val apiService: ApiService) : AuthDataSource {
     override fun login(email: String, pass: String): Flowable<Resource<LoginResponse>> {
         val user = LoginModel(email, pass)
         val result = PublishSubject.create<Resource<LoginResponse>>()
@@ -22,5 +22,6 @@ class AuthRepo(private val apiService : ApiService) :AuthDataSource{
             })
         return result.toFlowable(BackpressureStrategy.BUFFER)
     }
-
 }
+
+
